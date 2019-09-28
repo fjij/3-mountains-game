@@ -211,6 +211,7 @@ MonoBehaviour:
   playerIndex: 0
   audioSource: {fileID: 887372816}
   fireTransform: {fileID: 313531616635398498}
+  BurnDuration: 15
 --- !u!1001 &56456034936257709
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class BirdMovement : MonoBehaviour
 	public int playerIndex = 0;
 	public AudioSource audioSource;
 	public Transform fireTransform;
+	public float BurnDuration = 15f;
 
 	private KeyCode[] upKey = {KeyCode.W, KeyCode.UpArrow};
 	private KeyCode[] downKey = {KeyCode.S, KeyCode.DownArrow};
@@ -19,6 +20,8 @@ public class BirdMovement : MonoBehaviour
 	private KeyCode[] jumpKey = {KeyCode.Space, KeyCode.RightShift};
 
 	private bool lit = false;
+	private float burnTimer = 0.0f;
+	private bool grounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class BirdMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		grounded = isGrounded();
         //Movement Detectors
         if (Input.GetKey(upKey[playerIndex]))
         {
@@ -47,10 +51,17 @@ public class BirdMovement : MonoBehaviour
         {
             MoveRight(rb);
         }
-        if(Input.GetKeyDown(jumpKey[playerIndex]) && isGrounded())
+        if(Input.GetKeyDown(jumpKey[playerIndex]) && grounded)
         {
             Jump(rb);
         }
+		// fire
+		if (lit){
+			burnTimer -= Time.deltaTime;
+			if(burnTimer <= 0.0f){
+				SetLit(false);
+			}
+		}
     }
 	private bool isGrounded() {
 		return Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f);
@@ -58,19 +69,26 @@ public class BirdMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(rb.velocity.x * 0.9f, rb.velocity.y, rb.velocity.z * 0.9f);
+		if (grounded) {
+			ApplyFriction(0.8f);
+		}
     }
 
+	private void ApplyFriction(float f) {
+		rb.velocity = new Vector3(rb.velocity.x * f, rb.velocity.y, rb.velocity.z * f);
+	}
+
 	void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.tag == "Fire") {
+		if (playerIndex == 0 && collision.gameObject.tag == "Fire") {
 			SetLit(true);
 		}
 	}
 
 	void SetLit(bool lit) {
-		if (lit != this.lit){
-			this.lit = lit;
-			fireTransform.gameObject.SetActive(lit);
+		this.lit = lit;
+		fireTransform.gameObject.SetActive(lit);
+		if (lit){
+			this.burnTimer = BurnDuration;
 		}
 	}
 

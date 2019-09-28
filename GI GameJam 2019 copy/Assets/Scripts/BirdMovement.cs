@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    public Vector3 StartLocation;
+    public Transform StartLocation;
     public Rigidbody rb;
     public float movementSpeed;
     public float JumpHeight;
@@ -13,7 +13,7 @@ public class BirdMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.transform.position = StartLocation;
+        rb.transform.position = StartLocation.position;
         rb.velocity = new Vector3(0f, 0f, 0f);
         onFloor = true;
     }
@@ -52,7 +52,7 @@ public class BirdMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name.Equals("Floor"))
-        { 
+        {
             onFloor = true;
         }
     }

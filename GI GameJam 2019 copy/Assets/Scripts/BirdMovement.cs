@@ -10,12 +10,15 @@ public class BirdMovement : MonoBehaviour
     public float JumpHeight;
 	public int playerIndex = 0;
 	public AudioSource audioSource;
+	public Transform fireTransform;
 
 	private KeyCode[] upKey = {KeyCode.W, KeyCode.UpArrow};
 	private KeyCode[] downKey = {KeyCode.S, KeyCode.DownArrow};
 	private KeyCode[] leftKey = {KeyCode.A, KeyCode.LeftArrow};
 	private KeyCode[] rightKey = {KeyCode.D, KeyCode.RightArrow};
 	private KeyCode[] jumpKey = {KeyCode.Space, KeyCode.RightShift};
+
+	private bool lit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +60,19 @@ public class BirdMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x * 0.9f, rb.velocity.y, rb.velocity.z * 0.9f);
     }
+
+	void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.tag == "Fire") {
+			SetLit(true);
+		}
+	}
+
+	void SetLit(bool lit) {
+		if (lit != this.lit){
+			this.lit = lit;
+			fireTransform.gameObject.SetActive(lit);
+		}
+	}
 
     //Movement Functions
     void MoveUp(Rigidbody rb)

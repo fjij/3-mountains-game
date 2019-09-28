@@ -207,7 +207,7 @@ MonoBehaviour:
   StartLocation: {fileID: 0}
   rb: {fileID: 56456034950256803}
   movementSpeed: 5
-  JumpHeight: 5
+  JumpHeight: 7
   playerIndex: 0
   audioSource: {fileID: 887372816}
   fireTransform: {fileID: 313531616635398498}

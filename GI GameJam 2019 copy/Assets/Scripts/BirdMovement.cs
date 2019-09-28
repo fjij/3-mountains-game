@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    public Transform StartLocation;
+    //public Transform StartLocation;
     public Rigidbody rb;
     public float movementSpeed;
     public float JumpHeight;
@@ -12,6 +12,7 @@ public class BirdMovement : MonoBehaviour
 	public AudioSource audioSource;
 	public Transform fireTransform;
 	public float BurnDuration = 15f;
+    //public Camera cam;
 
 	private KeyCode[] upKey = {KeyCode.W, KeyCode.UpArrow};
 	private KeyCode[] downKey = {KeyCode.S, KeyCode.DownArrow};
@@ -26,7 +27,7 @@ public class BirdMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.transform.position = StartLocation.position;
+        //rb.transform.position = StartLocation.position;
         rb.velocity = new Vector3(0f, 0f, 0f);
     }
 
@@ -84,6 +85,10 @@ public class BirdMovement : MonoBehaviour
 		if (playerIndex == 0 && collision.gameObject.tag == "Fire") {
 			SetLit(true);
 		}
+        //if (playerIndex == 1 && collision.gameObject.tag == "Heavy")
+        //{
+        //    CameraShake(cam);
+        //}
 	}
 
 	void SetLit(bool lit) {
@@ -93,6 +98,11 @@ public class BirdMovement : MonoBehaviour
 			this.burnTimer = BurnDuration;
 		}
 	}
+
+   // void CameraShake(Camera cam)
+   // {
+   //     cam.transform.position = cam.transform.position + new Vector3(0f, Random.Range(0.4f,1f), 0f);
+   // }
 
     //Movement Functions
     void MoveUp(Rigidbody rb)

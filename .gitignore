@@ -34,3 +34,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#Ds store
+*.DS_Store
+.DS_Store
+GI GameJam 2019 copy/Assets/.DS_Store

@@ -81,6 +81,14 @@ public class BirdMovement : MonoBehaviour
 		rb.velocity = new Vector3(rb.velocity.x * f, rb.velocity.y, rb.velocity.z * f);
 	}
 
+	public void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Checkpoint"){
+			Vector3 pos = gameObject.transform.position;
+			gameObject.GetComponent<RespawnMechanic>().SetStartPosition(pos);
+		}
+	}
+
 	void OnCollisionEnter(Collision collision) {
 		if (playerIndex == 0 && collision.gameObject.tag == "Fire") {
 			SetLit(true);

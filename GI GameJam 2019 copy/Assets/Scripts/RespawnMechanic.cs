@@ -19,4 +19,8 @@ public class RespawnMechanic : MonoBehaviour
             this.transform.position = startPosition;
         }
     }
+
+	public void SetStartPosition(Vector3 startPosition){
+		this.startPosition = startPosition;
+	}
 }

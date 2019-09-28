@@ -53,7 +53,9 @@ public class BirdMovement : MonoBehaviour
         }
         if(Input.GetKeyDown(jumpKey[playerIndex]) && grounded)
         {
-            Jump(rb);
+			if (playerIndex == 0) {
+	            Jump(rb);
+			}
         }
 		// fire
 		if (lit){

@@ -209,6 +209,8 @@ MonoBehaviour:
   JumpHeight: 6
   playerIndex: 1
   audioSource: {fileID: 353633969}
+  fireTransform: {fileID: 0}
+  BurnDuration: 15
 --- !u!1001 &3406971059132728128
 PrefabInstance:
   m_ObjectHideFlags: 0

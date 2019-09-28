@@ -9,6 +9,7 @@ public class BirdMovement : MonoBehaviour
     public float movementSpeed;
     public float JumpHeight;
     private bool onFloor;
+    public Transform Level;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,7 @@ public class BirdMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name.Equals("Floor"))
+        if (collision.gameObject.transform.IsChildOf(Level))
         {
             onFloor = true;
         }

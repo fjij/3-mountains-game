@@ -41,7 +41,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 75964c8173464ba49a10fb1776433ee6, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 15, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -70,7 +70,7 @@ Material:
     - _Parallax: 0.02
     - _ScrollSpeedX: 0
     - _ScrollSpeedY: 2
-    - _ScrollXSpeed: 3.2
+    - _ScrollXSpeed: 7.2
     - _ScrollYSpeed: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraTracker : MonoBehaviour
 {
     public GameObject player;
+    public GameObject player2;
     public Vector3 offset;
     Vector3 nextPosition;
     public float movementSpeed;
@@ -17,7 +18,7 @@ public class CameraTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nextPosition = player.transform.position + offset;
+        nextPosition = 0.5f*(player.transform.position + player2.transform.position) + offset;
         this.transform.position = Vector3.Lerp(this.transform.position, nextPosition, Time.deltaTime * movementSpeed);
             //player.transform.position + offset;
         //this.transform.LookAt(player.transform);

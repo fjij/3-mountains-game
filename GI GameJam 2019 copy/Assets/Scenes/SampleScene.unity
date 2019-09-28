@@ -307,8 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc7a1e6abe64475d9c12a2dbce45745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  offset: {x: 0, y: 10, z: -20}
+  player: {fileID: 1875636170}
+  offset: {x: 0, y: 5, z: -10}
+  movementSpeed: 3
 --- !u!1 &1875636170
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +322,7 @@ GameObject:
   - component: {fileID: 1875636173}
   - component: {fileID: 1875636172}
   - component: {fileID: 1875636171}
+  - component: {fileID: 1875636175}
   m_Layer: 0
   m_Name: chicken
   m_TagString: Untagged
@@ -387,6 +389,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875636175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875636170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea04ad624bedb402f95dacfeb0b56ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartLocation: {x: 0, y: 2, z: 0}
+  rb: {fileID: 1875636171}
+  movementSpeed: 5
+  JumpHeight: 5
 --- !u!1 &2136932702
 GameObject:
   m_ObjectHideFlags: 0

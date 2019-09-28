@@ -8,54 +8,54 @@ public class BirdMovement : MonoBehaviour
     public Rigidbody rb;
     public float movementSpeed;
     public float JumpHeight;
-    private bool onFloor;
-    public Transform Level;
+	public int playerIndex = 0;
+	public AudioSource audioSource;
+
+	private KeyCode[] upKey = {KeyCode.W, KeyCode.UpArrow};
+	private KeyCode[] downKey = {KeyCode.S, KeyCode.DownArrow};
+	private KeyCode[] leftKey = {KeyCode.A, KeyCode.LeftArrow};
+	private KeyCode[] rightKey = {KeyCode.D, KeyCode.RightArrow};
+	private KeyCode[] jumpKey = {KeyCode.Space, KeyCode.RightShift};
 
     // Start is called before the first frame update
     void Start()
     {
         rb.transform.position = StartLocation.position;
         rb.velocity = new Vector3(0f, 0f, 0f);
-        onFloor = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Movement Detectors
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(upKey[playerIndex]))
         {
             MoveUp(rb);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(downKey[playerIndex]))
         {
             MoveDown(rb);
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(leftKey[playerIndex]))
         {
             MoveLeft(rb);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(rightKey[playerIndex]))
         {
             MoveRight(rb);
         }
-        if(Input.GetKeyDown(KeyCode.Space) && onFloor)
+        if(Input.GetKeyDown(jumpKey[playerIndex]) && isGrounded())
         {
-            onFloor = false;
             Jump(rb);
         }
     }
+	private bool isGrounded() {
+		return Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f);
+	}
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector3(rb.velocity.x * 0.9f, rb.velocity.y, rb.velocity.z * 0.9f);
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.transform.IsChildOf(Level))
-        {
-            onFloor = true;
-        }
     }
 
     //Movement Functions
@@ -77,6 +77,7 @@ public class BirdMovement : MonoBehaviour
     }
     void Jump(Rigidbody rb)
     {
+		audioSource.Play();
         rb.velocity = new Vector3(rb.velocity.x, JumpHeight, rb.velocity.z);
     }
 }

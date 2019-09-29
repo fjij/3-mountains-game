@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RespawnMechanic : MonoBehaviour
 {
+	public AudioSource sound;
     private Vector3 startPosition;
 	private Quaternion startRotation;
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class RespawnMechanic : MonoBehaviour
             this.transform.position = startPosition;
 			this.transform.rotation = startRotation;
 			this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+			sound.Play();
         }
     }
 

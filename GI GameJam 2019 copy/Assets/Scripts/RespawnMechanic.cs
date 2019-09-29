@@ -5,10 +5,12 @@ using UnityEngine;
 public class RespawnMechanic : MonoBehaviour
 {
     private Vector3 startPosition;
+	private Quaternion startRotation;
     // Start is called before the first frame update
     void Start()
     {
         startPosition = this.transform.position;
+		startRotation = this.transform.rotation;
     }
 
     // Update is called once per frame
@@ -17,6 +19,8 @@ public class RespawnMechanic : MonoBehaviour
         if(this.transform.position.y <= -20)
         {
             this.transform.position = startPosition;
+			this.transform.rotation = startRotation;
+			this.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 

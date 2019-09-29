@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLocation: {fileID: 0}
   rb: {fileID: 56456034950256803}
-  movementSpeed: 5
+  movementSpeed: 8
   JumpHeight: 7
   playerIndex: 0
   audioSource: {fileID: 887372816}

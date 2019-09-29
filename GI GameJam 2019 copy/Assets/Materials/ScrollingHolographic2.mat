@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ScrollingHolographic
+  m_Name: ScrollingHolographic2
   m_Shader: {fileID: 4800000, guid: f528ee42d7a41a1479bac7411f0d7d3d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -70,7 +70,7 @@ Material:
     - _Parallax: 0.02
     - _ScrollSpeedX: 0
     - _ScrollSpeedY: 2
-    - _ScrollXSpeed: 7.2
+    - _ScrollXSpeed: -8
     - _ScrollYSpeed: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

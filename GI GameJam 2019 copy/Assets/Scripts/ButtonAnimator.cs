@@ -8,6 +8,8 @@ public class ButtonAnimator : MonoBehaviour
 	public AudioSource audioSource;
 	public float MinimumMass = 2f;
     public GameObject endScreen;
+    public AudioSource victoryRoyale;
+    public AudioSource bgm;
 
 	private bool pressed = false;
 
@@ -18,6 +20,8 @@ public class ButtonAnimator : MonoBehaviour
 				animator.SetBool("on", true);
 				Activate();
                 endScreen.SetActive(true);
+                bgm.Pause();
+                victoryRoyale.Play();
 			}
 		}
 	}

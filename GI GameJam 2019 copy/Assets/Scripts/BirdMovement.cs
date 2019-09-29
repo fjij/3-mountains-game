@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour
 {
-    public Transform StartLocation;
     public Rigidbody rb;
     public float movementSpeed;
     public float JumpHeight;
 	public int playerIndex = 0;
 	public AudioSource audioSource;
-	public Transform fireTransform;
-	public float BurnDuration = 15f;
     //public Camera cam;
 
 	private KeyCode[] upKey = {KeyCode.W, KeyCode.UpArrow};
@@ -20,15 +17,12 @@ public class BirdMovement : MonoBehaviour
 	private KeyCode[] rightKey = {KeyCode.D, KeyCode.RightArrow};
 	private KeyCode[] jumpKey = {KeyCode.Space, KeyCode.RightShift};
 
-	private bool lit = false;
-	private float burnTimer = 0.0f;
 	private bool grounded = false;
     private bool moving = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb.transform.position = StartLocation.position;
         rb.velocity = new Vector3(0f, 0f, 0f);
     }
 
@@ -70,13 +64,6 @@ public class BirdMovement : MonoBehaviour
                 rb.constraints = RigidbodyConstraints.None;
             }
         }
-		// fire
-		if (lit){
-			burnTimer -= Time.deltaTime;
-			if(burnTimer <= 0.0f){
-				SetLit(false);
-			}
-		}
     }
     public void StartMoving() {
         moving = true;
@@ -101,24 +88,6 @@ public class BirdMovement : MonoBehaviour
 		if (other.tag == "Checkpoint"){
 			Vector3 pos = gameObject.transform.position;
 			gameObject.GetComponent<RespawnMechanic>().SetStartPosition(pos);
-		}
-	}
-
-	void OnCollisionEnter(Collision collision) {
-		if (playerIndex == 0 && collision.gameObject.tag == "Fire") {
-			SetLit(true);
-		}
-        //if (playerIndex == 1 && collision.gameObject.tag == "Heavy")
-        //{
-        //    CameraShake(cam);
-        //}
-	}
-
-	void SetLit(bool lit) {
-		this.lit = lit;
-		fireTransform.gameObject.SetActive(lit);
-		if (lit){
-			this.burnTimer = BurnDuration;
 		}
 	}
 

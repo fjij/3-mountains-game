@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 2369775440937388021}
   m_Layer: 0
   m_Name: CubeChicken
-  m_TagString: Untagged
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,13 +299,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3406971059149411635}
   serializedVersion: 2
-  m_Mass: 2.25
+  m_Mass: 5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &3406971059149411645
 BoxCollider:
@@ -334,8 +334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartLocation: {fileID: 0}
   rb: {fileID: 3406971059149411644}
-  movementSpeed: 7
-  JumpHeight: 6
+  movementSpeed: 5
+  JumpHeight: 0
   playerIndex: 1
   audioSource: {fileID: 353633969}
   fireTransform: {fileID: 0}

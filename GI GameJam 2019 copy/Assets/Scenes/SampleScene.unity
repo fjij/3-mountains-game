@@ -6764,7 +6764,7 @@ MonoBehaviour:
   offset: {x: 0, y: 10, z: -20}
   movementSpeed: 3
   viewChangeSpeed: 0
-  zoomOutTimes: 2
+  zoomOutTimes: 1.5
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0

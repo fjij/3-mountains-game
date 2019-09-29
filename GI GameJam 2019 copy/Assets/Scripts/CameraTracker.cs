@@ -15,6 +15,7 @@ public class CameraTracker : MonoBehaviour
 
     bool isPuzzleViewOn = false;
     Quaternion fixedRotation;
+	Quaternion targetRotation;
     Vector3 lastFrameLookingPoint;
 
     public float zoomOutTimes = 2.5f;
@@ -37,18 +38,23 @@ public class CameraTracker : MonoBehaviour
         if (isPuzzleViewOn)
         {
             nextPosition = new Vector3(midPoint.x, zoomOutTimes * offset.magnitude, midPoint.z);
-            transform.eulerAngles = new Vector3(90, 0, 0);
+            targetRotation.eulerAngles = new Vector3(90, 0, 0);
         }
 
 
         if (!isPuzzleViewOn)
         {
             nextPosition = midPoint + offset;
-            transform.rotation = fixedRotation;
+            targetRotation = fixedRotation;
         }
 
         this.transform.position = Vector3.Lerp(this.transform.position, nextPosition, Time.deltaTime * movementSpeed);
+		this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, Time.deltaTime * movementSpeed);
         //player.transform.position + offset;
+
+		if (Input.GetKeyDown(KeyCode.C)){
+			isPuzzleViewOn = !isPuzzleViewOn;
+		}
     }
 
     void IsPuzzleViewOn(bool temp)

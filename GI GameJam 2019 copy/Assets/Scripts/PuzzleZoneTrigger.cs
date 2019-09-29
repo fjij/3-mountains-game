@@ -26,6 +26,6 @@ public class PuzzleZoneTrigger : MonoBehaviour
 
     private void UpdateChickens(){
 		isOn = chickenCount > 0;
-        mainCamera.SendMessage("IsPuzzleViewOn", isOn);
+        //mainCamera.SendMessage("IsPuzzleViewOn", isOn);
 	}
 }

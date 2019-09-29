@@ -23,6 +23,7 @@ public class BirdMovement : MonoBehaviour
 	private bool lit = false;
 	private float burnTimer = 0.0f;
 	private bool grounded = false;
+    private bool moving = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,27 +37,31 @@ public class BirdMovement : MonoBehaviour
     {
 		grounded = isGrounded();
         //Movement Detectors
-        if (Input.GetKey(upKey[playerIndex]))
+        if (moving)
         {
-            MoveUp(rb);
-        }
-        if (Input.GetKey(downKey[playerIndex]))
-        {
-            MoveDown(rb);
-        }
-        if (Input.GetKey(leftKey[playerIndex]))
-        {
-            MoveLeft(rb);
-        }
-        if (Input.GetKey(rightKey[playerIndex]))
-        {
-            MoveRight(rb);
-        }
-        if(Input.GetKeyDown(jumpKey[playerIndex]) && grounded)
-        {
-			if (playerIndex == 0) {
-	            Jump(rb);
-			}
+            if (Input.GetKey(upKey[playerIndex]))
+            {
+                MoveUp(rb);
+            }
+            if (Input.GetKey(downKey[playerIndex]))
+            {
+                MoveDown(rb);
+            }
+            if (Input.GetKey(leftKey[playerIndex]))
+            {
+                MoveLeft(rb);
+            }
+            if (Input.GetKey(rightKey[playerIndex]))
+            {
+                MoveRight(rb);
+            }
+            if (Input.GetKeyDown(jumpKey[playerIndex]) && grounded)
+            {
+                if (playerIndex == 0)
+                {
+                    Jump(rb);
+                }
+            }
         }
 		// fire
 		if (lit){
@@ -65,6 +70,9 @@ public class BirdMovement : MonoBehaviour
 				SetLit(false);
 			}
 		}
+    }
+    public void StartMoving() {
+        moving = true;
     }
 	private bool isGrounded() {
 		return Physics.Raycast(transform.position, -Vector3.up, GetComponent<Collider>().bounds.extents.y + 0.1f);

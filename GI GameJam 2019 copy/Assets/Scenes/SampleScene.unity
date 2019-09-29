@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.64967144, g: 0.592709, b: 0.70609397, a: 1}
+  m_IndirectSpecularColor: {r: 0.6496842, g: 0.5927248, b: 0.70609874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -702,7 +702,7 @@ PrefabInstance:
     - target: {fileID: 4426864180439421812, guid: ff914d378c275bc479f6aee7761e545b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4426864180439421812, guid: ff914d378c275bc479f6aee7761e545b,
         type: 3}
@@ -1587,7 +1587,7 @@ PrefabInstance:
     - target: {fileID: 3459448895040600093, guid: d1179cf13698c431dab7b1b7c28938bd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3459448895040600093, guid: d1179cf13698c431dab7b1b7c28938bd,
         type: 3}
@@ -2217,6 +2217,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d25feeb6c46754d92842d51312036fc8, type: 3}
+--- !u!82 &252036659 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2338351230464706767, guid: 251ec2eb6ba314461b64a401933ef3f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977704171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &252469962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4475,7 +4481,7 @@ Transform:
   - {fileID: 1495012134}
   - {fileID: 979222152}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &692296556
 PrefabInstance:
@@ -11359,7 +11365,7 @@ PrefabInstance:
     - target: {fileID: 8168407113711148074, guid: e8ca667d1c5d645168c75a6947f839bd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8168407113711148074, guid: e8ca667d1c5d645168c75a6947f839bd,
         type: 3}
@@ -11985,7 +11991,7 @@ PrefabInstance:
     - target: {fileID: 4426864180439421812, guid: ff914d378c275bc479f6aee7761e545b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4426864180439421812, guid: ff914d378c275bc479f6aee7761e545b,
         type: 3}
@@ -12259,7 +12265,7 @@ PrefabInstance:
     - target: {fileID: 7767481759636530660, guid: 251ec2eb6ba314461b64a401933ef3f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7767481759636530660, guid: 251ec2eb6ba314461b64a401933ef3f2,
         type: 3}
@@ -12296,6 +12302,21 @@ PrefabInstance:
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 1366896775}
+    - target: {fileID: 1311374131827890849, guid: 251ec2eb6ba314461b64a401933ef3f2,
+        type: 3}
+      propertyPath: victoryRoyale
+      value: 
+      objectReference: {fileID: 252036659}
+    - target: {fileID: 1311374131827890849, guid: 251ec2eb6ba314461b64a401933ef3f2,
+        type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 963194231}
+    - target: {fileID: 2338351230464706767, guid: 251ec2eb6ba314461b64a401933ef3f2,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5424535add462476d98383b784b923ea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251ec2eb6ba314461b64a401933ef3f2, type: 3}
 --- !u!1001 &1985176612
@@ -12428,7 +12449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 188}
+  m_AnchoredPosition: {x: 0, y: 112}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003378881

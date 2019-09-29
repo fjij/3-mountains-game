@@ -62,6 +62,13 @@ public class BirdMovement : MonoBehaviour
                     Jump(rb);
                 }
             }
+            if(playerIndex == 1 && Input.GetKeyDown(KeyCode.RightShift))
+            {
+                rb.constraints = RigidbodyConstraints.FreezeRotation;
+            }else if(playerIndex == 1 && Input.GetKeyUp(KeyCode.RightShift))
+            {
+                rb.constraints = RigidbodyConstraints.None;
+            }
         }
 		// fire
 		if (lit){

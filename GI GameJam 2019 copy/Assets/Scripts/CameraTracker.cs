@@ -17,7 +17,7 @@ public class CameraTracker : MonoBehaviour
     Quaternion fixedRotation;
     Vector3 lastFrameLookingPoint;
 
-    public float zoomOutTimes = 2.5;
+    public float zoomOutTimes = 2.5f;
     void Start()
     {
         this.transform.position = player.transform.position + offset;

@@ -7,6 +7,7 @@ public class ButtonAnimator : MonoBehaviour
 	public Animator animator;
 	public AudioSource audioSource;
 	public float MinimumMass = 2f;
+    public GameObject endScreen;
 
 	private bool pressed = false;
 
@@ -16,6 +17,7 @@ public class ButtonAnimator : MonoBehaviour
 			if (rb.mass > MinimumMass && !pressed) {
 				animator.SetBool("on", true);
 				Activate();
+                endScreen.SetActive(true);
 			}
 		}
 	}

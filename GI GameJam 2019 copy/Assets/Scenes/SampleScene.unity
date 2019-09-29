@@ -7579,6 +7579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeChicken
       objectReference: {fileID: 0}
+    - target: {fileID: 7878513803321601345, guid: b12fc000b09664568b7b4053e14216d6,
+        type: 3}
+      propertyPath: StartLocation
+      value: 
+      objectReference: {fileID: 1140829869}
     - target: {fileID: 3406971059149411647, guid: b12fc000b09664568b7b4053e14216d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7634,11 +7639,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7878513803321601345, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: StartLocation
-      value: 
-      objectReference: {fileID: 1140829869}
     - target: {fileID: 2416624487000846158, guid: b12fc000b09664568b7b4053e14216d6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11892,6 +11892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chicken
       objectReference: {fileID: 0}
+    - target: {fileID: 56456034950256807, guid: e5331ca13da7f4958a725471bc614f82,
+        type: 3}
+      propertyPath: StartLocation
+      value: 
+      objectReference: {fileID: 1082399571}
     - target: {fileID: 56456034950256806, guid: e5331ca13da7f4958a725471bc614f82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11947,11 +11952,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 56456034950256807, guid: e5331ca13da7f4958a725471bc614f82,
-        type: 3}
-      propertyPath: StartLocation
-      value: 
-      objectReference: {fileID: 1082399571}
     - target: {fileID: 7770303014095556984, guid: e5331ca13da7f4958a725471bc614f82,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12400,8 +12400,24 @@ PrefabInstance:
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 1366896775}
+    - target: {fileID: 1311374131827890849, guid: 251ec2eb6ba314461b64a401933ef3f2,
+        type: 3}
+      propertyPath: victoryRoyale
+      value: 
+      objectReference: {fileID: 1977704172}
+    - target: {fileID: 1311374131827890849, guid: 251ec2eb6ba314461b64a401933ef3f2,
+        type: 3}
+      propertyPath: bgm
+      value: 
+      objectReference: {fileID: 963194231}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 251ec2eb6ba314461b64a401933ef3f2, type: 3}
+--- !u!82 &1977704172 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2338351230464706767, guid: 251ec2eb6ba314461b64a401933ef3f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977704171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1985176612
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
+    Rigidbody ramp;
+    Collider myCollider;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,13 @@ public class Button : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.GetComponent<Rigidbody>().mass > 1.01)
+        {
+            //Rigidbody Instantiate(ramp)
+        }
+    }
+
 }

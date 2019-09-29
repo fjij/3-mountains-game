@@ -13,21 +13,19 @@ public class PuzzleZoneTrigger : MonoBehaviour
         if (other.tag == "Chicken")
         {
             chickenCount++;
-            isOn = true;
+			UpdateChickens();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Chicken")
+        if (other.tag == "Chicken"){
             chickenCount--;
+			UpdateChickens();
+		}
     }
 
-    private void Update()
-    {
-        if (chickenCount == 0)
-        {
-            isOn = false;
-        }
+    private void UpdateChickens(){
+		isOn = chickenCount > 0;
         mainCamera.SendMessage("IsPuzzleViewOn", isOn);
-    }
+	}
 }

@@ -17,6 +17,7 @@ public class CameraTracker : MonoBehaviour
     Quaternion fixedRotation;
     Vector3 lastFrameLookingPoint;
 
+    public float zoomOutTimes = 2.5f;
     void Start()
     {
         this.transform.position = player.transform.position + offset;
@@ -35,7 +36,7 @@ public class CameraTracker : MonoBehaviour
 
         if (isPuzzleViewOn)
         {
-            nextPosition = new Vector3(midPoint.x, 2 * offset.magnitude, midPoint.z);
+            nextPosition = new Vector3(midPoint.x, zoomOutTimes * offset.magnitude, midPoint.z);
             transform.eulerAngles = new Vector3(90, 0, 0);
         }
 

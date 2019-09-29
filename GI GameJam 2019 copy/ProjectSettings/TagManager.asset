@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Checkpoint
+  - Chicken
   layers:
   - Default
   - TransparentFX

@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 953896749093761693}
   m_Layer: 0
   m_Name: chicken
-  m_TagString: Untagged
+  m_TagString: Chicken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,11 +361,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 56456034950256806}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 7b5fd69b9ec084a3eb38189b1b530ef8,
-        type: 3}
-      propertyPath: m_Name
-      value: Chicken_Red
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7b5fd69b9ec084a3eb38189b1b530ef8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -420,6 +415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 7b5fd69b9ec084a3eb38189b1b530ef8,
+        type: 3}
+      propertyPath: m_Name
+      value: Chicken_Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b5fd69b9ec084a3eb38189b1b530ef8, type: 3}

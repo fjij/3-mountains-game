@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.64967144, g: 0.592709, b: 0.70609397, a: 1}
+  m_IndirectSpecularColor: {r: 0.6496842, g: 0.5927248, b: 0.70609874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1138,11 +1138,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 950915857}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 92276ac1eda494c96bbf3789f641e1fb,
-        type: 3}
-      propertyPath: m_Name
-      value: bush (1)
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 92276ac1eda494c96bbf3789f641e1fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1212,6 +1207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5000002
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 92276ac1eda494c96bbf3789f641e1fb,
+        type: 3}
+      propertyPath: m_Name
+      value: bush (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92276ac1eda494c96bbf3789f641e1fb, type: 3}
@@ -5248,11 +5248,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 252469963}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 564de7e09b9704c739bf8b143468b63a,
-        type: 3}
-      propertyPath: m_Name
-      value: plank
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 564de7e09b9704c739bf8b143468b63a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5322,6 +5317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: -0.87280947
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 564de7e09b9704c739bf8b143468b63a,
+        type: 3}
+      propertyPath: m_Name
+      value: plank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564de7e09b9704c739bf8b143468b63a, type: 3}
@@ -6673,6 +6673,7 @@ MonoBehaviour:
   player2: {fileID: 25733064}
   offset: {x: 0, y: 10, z: -20}
   movementSpeed: 3
+  viewChangeSpeed: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7121,11 +7122,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 950915857}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 92276ac1eda494c96bbf3789f641e1fb,
-        type: 3}
-      propertyPath: m_Name
-      value: bush
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 92276ac1eda494c96bbf3789f641e1fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7195,6 +7191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.5000002
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 92276ac1eda494c96bbf3789f641e1fb,
+        type: 3}
+      propertyPath: m_Name
+      value: bush
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92276ac1eda494c96bbf3789f641e1fb, type: 3}
@@ -7299,6 +7300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeChicken
       objectReference: {fileID: 0}
+    - target: {fileID: 7878513803321601345, guid: b12fc000b09664568b7b4053e14216d6,
+        type: 3}
+      propertyPath: StartLocation
+      value: 
+      objectReference: {fileID: 1140829869}
     - target: {fileID: 3406971059149411647, guid: b12fc000b09664568b7b4053e14216d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7352,36 +7358,6 @@ PrefabInstance:
     - target: {fileID: 3406971059149411647, guid: b12fc000b09664568b7b4053e14216d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406971059149411644, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406971059149411644, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3406971059149411644, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878513803321601345, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: StartLocation
-      value: 
-      objectReference: {fileID: 1140829869}
-    - target: {fileID: 7878513803321601345, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7878513803321601345, guid: b12fc000b09664568b7b4053e14216d6,
-        type: 3}
-      propertyPath: JumpHeight
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11468,6 +11444,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chicken
       objectReference: {fileID: 0}
+    - target: {fileID: 56456034950256807, guid: e5331ca13da7f4958a725471bc614f82,
+        type: 3}
+      propertyPath: StartLocation
+      value: 
+      objectReference: {fileID: 1082399571}
     - target: {fileID: 56456034950256806, guid: e5331ca13da7f4958a725471bc614f82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11523,11 +11504,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 56456034950256807, guid: e5331ca13da7f4958a725471bc614f82,
-        type: 3}
-      propertyPath: StartLocation
-      value: 
-      objectReference: {fileID: 1082399571}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5331ca13da7f4958a725471bc614f82, type: 3}
 --- !u!4 &1894347742 stripped

@@ -30,5 +30,4 @@ public class PuzzleZoneTrigger : MonoBehaviour
         }
         mainCamera.SendMessage("IsPuzzleViewOn", isOn);
     }
-
 }

@@ -16,6 +16,7 @@ public class CameraTracker : MonoBehaviour
     bool isPuzzleViewOn = false;
     Quaternion fixedRotation;
     Vector3 lastFrameLookingPoint;
+
     void Start()
     {
         this.transform.position = player.transform.position + offset;
@@ -34,8 +35,8 @@ public class CameraTracker : MonoBehaviour
 
         if (isPuzzleViewOn)
         {
-            nextPosition = new Vector3(0f, offset.magnitude, 0f);
-            this.transform.LookAt(midPoint);
+            nextPosition = new Vector3(midPoint.x, 2 * offset.magnitude, midPoint.z);
+            transform.eulerAngles = new Vector3(90, 0, 0);
         }
 
 
@@ -53,4 +54,5 @@ public class CameraTracker : MonoBehaviour
     {
         isPuzzleViewOn = temp;
     }
+
 }

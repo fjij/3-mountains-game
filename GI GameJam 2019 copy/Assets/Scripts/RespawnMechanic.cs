@@ -16,7 +16,7 @@ public class RespawnMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.transform.position.y <= -20)
+        if(this.transform.position.y <= -17)
         {
             this.transform.position = startPosition;
 			this.transform.rotation = startRotation;
